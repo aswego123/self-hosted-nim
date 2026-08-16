@@ -38,7 +38,7 @@ from dotenv import load_dotenv
 
 INVOKE_URL = "https://integrate.api.nvidia.com/v1/chat/completions"
 MODEL = "meta/llama-3.1-8b-instruct"
-STREAM = True
+STREAM = False
 
 
 def main() -> int:
@@ -107,8 +107,12 @@ def main() -> int:
         if data == "[DONE]":
             break
         chunk = json.loads(data)
-        # Each chunk's delta may or may not contain "content".
-        delta = chunk["choices"][0].get("delta", {})
+        # The final chunk from NIM often has choices=[] and only usage
+        # metadata — skip it. Real content chunks always have >=1 choice.
+        choices = chunk.get("choices") or []
+        if not choices:
+            continue
+        delta = choices[0].get("delta", {})
         piece = delta.get("content", "")
         if piece:
             print(piece, end="", flush=True)
