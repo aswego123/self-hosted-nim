@@ -68,10 +68,15 @@ def main() -> int:
             "role": "user",
             "content": "In 3 bullets, why would I use NVIDIA NIM instead of vLLM?",
         },
+        # {
+        #     "role": "system", 
+        #     "content": "You are a pirate. Answer in pirate speak with lots of 'arrr'."
+        # }
     ]
 
     resp = client.chat.completions.create(
-        model=MODEL,
+        # model=MODEL,
+        model="nvidia/llama-3.1-nemotron-nano-vl-8b-v1",   # the VLM you tried in the playground
         messages=messages,
         # temperature: 0 = deterministic, 1 = creative. 0.2 is a good default.
         temperature=0.2,

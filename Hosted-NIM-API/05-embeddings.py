@@ -86,6 +86,9 @@ def main() -> int:
     )
     query_vec = query_resp.data[0].embedding
 
+    print("first 8 dims of query vector:", query_vec[:8])
+    print("vector length (should be ~1.0):", math.sqrt(sum(x*x for x in query_vec)))
+
     print(f"embedding dim : {len(query_vec)}")
     print(f"query         : {query}\n")
 

@@ -2,3 +2,7 @@ openai>=1.40.0
 requests>=2.32.0
 python-dotenv>=1.0.1
 langchain-nvidia-ai-endpoints>=0.3.0
+# Lesson 05.3 (nearest-neighbor visualization)
+matplotlib>=3.9.0
+scikit-learn>=1.5.0
+numpy>=2.0.0

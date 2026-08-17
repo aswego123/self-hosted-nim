@@ -3,3 +3,5 @@ __pycache__/
 *.pyc
 .venv/
 NVIDIA NIM.pptx
+Hosted-NIM-API/assets/
+embed_scatter.png
