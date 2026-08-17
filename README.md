@@ -48,12 +48,12 @@ See [Hosted-NIM-API/README.md](Hosted-NIM-API/README.md) for what each lesson te
 
 ## Full learning path
 
-1. ✅ **Explore** — playground at [build.nvidia.com](https://build.nvidia.com).
-2. 🟡 **Hosted API** — you are here → [Hosted-NIM-API/](Hosted-NIM-API/).
-3. ⬜ **Self-hosted NIM** — run `nvcr.io/nim/...` locally with Docker + GPU.
-4. ⬜ **RAG app** — embedding NIM + vector DB + rerank NIM + chat NIM.
-5. ⬜ **Kubernetes** — NIM Operator + Helm chart.
-6. ⬜ **Domain NIMs** — Riva (speech), BioNeMo (science), more VLMs.
+1. **Explore** — playground at [build.nvidia.com](https://build.nvidia.com).
+2. **Hosted API** — you are here → [Hosted-NIM-API/](Hosted-NIM-API/).
+3. **Self-hosted NIM** — run `nvcr.io/nim/...` locally with Docker + GPU.
+4. **RAG app** — embedding NIM + vector DB + rerank NIM + chat NIM.
+5. **Kubernetes** — NIM Operator + Helm chart.
+6. **Domain NIMs** — Riva (speech), BioNeMo (science), more VLMs.
 
 ## Security note
 
