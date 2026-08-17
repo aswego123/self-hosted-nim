@@ -38,6 +38,7 @@ from dotenv import load_dotenv
 
 INVOKE_URL = "https://integrate.api.nvidia.com/v1/chat/completions"
 MODEL = "meta/llama-3.1-8b-instruct"
+# STREAM = True
 STREAM = False
 
 
