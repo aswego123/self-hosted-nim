@@ -47,20 +47,6 @@ cd /home/anjali/Downloads/AgenticIQ_ai/NVDIA-NIM
 ./.venv/bin/python Hosted-NIM-API/01-raw-http-request.py
 # ...etc
 ```
-
-## Concepts covered (Step 2 checklist)
-
-- [ ] Base URL + model naming (`vendor/model-id`)
-- [ ] API key hygiene (env var, never in source)
-- [ ] OpenAI-compatible schema (chat, streaming, embeddings, vision)
-- [ ] Raw SSE vs SDK-managed streaming
-- [ ] LangChain integration path
-- [ ] Query vs passage embeddings + cosine similarity
-- [ ] Top-k retrieval — the whole vector-DB idea in one function *(05.1)*
-- [ ] Batching, latency vs throughput, the sweet-spot batch size *(05.2)*
-- [ ] Visual debugging with PCA projection *(05.3)*
-- [ ] Multimodal message parts (`type: image_url`)
-
 ## Not in Step 2 (comes later)
 
 - Step 3 — Run a NIM container locally on your GPU with `docker run`.
