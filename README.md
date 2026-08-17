@@ -6,7 +6,6 @@ Hands-on notes and runnable code for exploring **NVIDIA Inference Microservices 
 
 | Path | What it is |
 |---|---|
-| [NVIDIA NIM.pptx](NVIDIA%20NIM.pptx) | Source slide deck (12 slides). |
 | [NVIDIA_NIM_Study_Guide.md](NVIDIA_NIM_Study_Guide.md) | Structured study guide extracted + expanded from the deck. Start here for concepts. |
 | [Hosted-NIM-API/](Hosted-NIM-API/) | **Step 2** — Runnable Python lessons calling the hosted NIM API. Start here for code. |
 | `.venv/` | Python 3.13 virtualenv (created locally, not committed). |
