@@ -1,6 +1,6 @@
 # Self-hosted NIM in Docker — Step 3 of the NVIDIA NIM learning path
 
-> **⚠️ GPU REQUIRED.** All lessons in this folder run only on a machine with a
+> **GPU REQUIRED.** All lessons in this folder run only on a machine with a
 > supported NVIDIA GPU + driver + Container Toolkit. If you're on a CPU-only
 > machine, treat this folder as a **turnkey runbook** you can execute later
 > on a cloud GPU (Lambda / RunPod / Vast / AWS / GCP) or on new hardware.
