@@ -1,0 +1,122 @@
+[
+  {
+    "id": "P01",
+    "topic": "nim-basics",
+    "text": "NVIDIA NIM packages optimized AI inference microservices as Docker containers that expose an OpenAI-compatible REST API on port 8000."
+  },
+  {
+    "id": "P02",
+    "topic": "nim-basics",
+    "text": "A NIM container bundles the model weights, an inference engine (TensorRT-LLM or vLLM), and a REST API layer so you can deploy an LLM with a single docker run command."
+  },
+  {
+    "id": "P03",
+    "topic": "nim-basics",
+    "text": "Because every NIM speaks the OpenAI chat completions schema, applications written against the OpenAI SDK can switch to a self-hosted NIM by changing only the base_url."
+  },
+  {
+    "id": "P04",
+    "topic": "nim-basics",
+    "text": "NVIDIA hosts a free tier of NIMs at integrate.api.nvidia.com so developers can prototype against the same models they will later self-host on their own GPUs."
+  },
+  {
+    "id": "P05",
+    "topic": "nim-basics",
+    "text": "The NIM Operator is a Kubernetes operator that installs and manages NIM microservices on a GPU cluster using Helm charts, handling model caching, autoscaling, and rolling upgrades."
+  },
+  {
+    "id": "P06",
+    "topic": "tensorrt-llm",
+    "text": "TensorRT-LLM is NVIDIA's inference engine that compiles a trained large language model into a GPU-specific optimized engine using fused kernels, paged KV-cache, and FlashAttention-style attention."
+  },
+  {
+    "id": "P07",
+    "topic": "tensorrt-llm",
+    "text": "TensorRT-LLM supports continuous batching and in-flight batching, which lets the server pack many concurrent requests into a single GPU forward pass for higher throughput."
+  },
+  {
+    "id": "P08",
+    "topic": "tensorrt-llm",
+    "text": "A NIM auto-selects the correct TensorRT-LLM engine profile for the detected GPU on first launch, then caches the built engine under ~/.cache/nim so subsequent starts are fast."
+  },
+  {
+    "id": "P09",
+    "topic": "tensorrt-llm",
+    "text": "Quantization such as FP8 or INT4 AWQ shrinks the model in VRAM and increases throughput, at the cost of a small quality drop; NIM ships quantized profiles for many models."
+  },
+  {
+    "id": "P10",
+    "topic": "rag-concepts",
+    "text": "Retrieval-Augmented Generation grounds an LLM's answer in an external corpus by retrieving relevant passages at query time and inserting them into the model's prompt as context."
+  },
+  {
+    "id": "P11",
+    "topic": "rag-concepts",
+    "text": "An embedding model converts text into a fixed-length dense vector so that semantic similarity between two pieces of text becomes cosine similarity between their vectors."
+  },
+  {
+    "id": "P12",
+    "topic": "rag-concepts",
+    "text": "A vector database stores embeddings and returns the top-k nearest neighbors to a query vector, typically using an approximate nearest-neighbor index like HNSW or IVF for scale."
+  },
+  {
+    "id": "P13",
+    "topic": "rag-concepts",
+    "text": "A reranker is a cross-encoder that scores every (query, passage) pair jointly and reorders the top-k candidates from the retriever; it is more accurate than embedding similarity but too slow to run over an entire corpus."
+  },
+  {
+    "id": "P14",
+    "topic": "rag-concepts",
+    "text": "The standard RAG evaluation metrics are recall@k, which measures whether a relevant passage appears in the top-k, and mean reciprocal rank, which rewards putting the relevant passage higher in the list."
+  },
+  {
+    "id": "P15",
+    "topic": "rag-concepts",
+    "text": "Chunking splits long documents into passages of a few hundred tokens each so that retrieval returns focused context; overlapping chunks help preserve information across chunk boundaries."
+  },
+  {
+    "id": "P16",
+    "topic": "ops-monitoring",
+    "text": "Every NIM exposes a Prometheus /metrics endpoint reporting request latency, tokens per second, GPU utilization, and queue depth, so it plugs straight into Grafana dashboards."
+  },
+  {
+    "id": "P17",
+    "topic": "ops-monitoring",
+    "text": "NIM exposes /v1/health/ready and /v1/health/live endpoints suitable for Kubernetes readiness and liveness probes, returning 200 only after the model engine is fully loaded."
+  },
+  {
+    "id": "P18",
+    "topic": "ops-monitoring",
+    "text": "You can scale a NIM horizontally by running multiple replicas behind a load balancer; the NIM Operator on Kubernetes automates this with a horizontal pod autoscaler tied to GPU utilization."
+  },
+  {
+    "id": "P19",
+    "topic": "ecosystem",
+    "text": "vLLM is an open-source LLM inference engine known for PagedAttention; NIM can use vLLM as a backend, but for supported models TensorRT-LLM usually delivers higher throughput on NVIDIA GPUs."
+  },
+  {
+    "id": "P20",
+    "topic": "ecosystem",
+    "text": "Triton Inference Server is a general-purpose model server that supports many backends including TensorRT-LLM, ONNX Runtime, and PyTorch; a NIM is essentially a preconfigured Triton plus model plus REST layer."
+  },
+  {
+    "id": "P21",
+    "topic": "distractor",
+    "text": "The Eiffel Tower is a wrought-iron lattice tower in Paris, France, completed in 1889 as the entrance arch to the 1889 World's Fair."
+  },
+  {
+    "id": "P22",
+    "topic": "distractor",
+    "text": "Chocolate chip cookies were invented in 1938 by Ruth Wakefield at the Toll House Inn in Whitman, Massachusetts."
+  },
+  {
+    "id": "P23",
+    "topic": "distractor",
+    "text": "Python is a high-level programming language created by Guido van Rossum and first released in 1991; its reference implementation is called CPython."
+  },
+  {
+    "id": "P24",
+    "topic": "distractor",
+    "text": "The Amazon rainforest produces roughly 20 percent of the world's oxygen and spans nine countries in South America."
+  }
+]

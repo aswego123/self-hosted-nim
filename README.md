@@ -9,6 +9,7 @@ Hands-on notes and runnable code for exploring **NVIDIA Inference Microservices 
 | [NVIDIA_NIM_Study_Guide.md](NVIDIA_NIM_Study_Guide.md) | Structured study guide extracted + expanded from the deck. Start here for concepts. |
 | [Hosted-NIM-API/](Hosted-NIM-API/) | **Step 2** — Runnable Python lessons calling the hosted NIM API. Start here for code. |
 | [Self-hosted NIM in Docker/](Self-hosted%20NIM%20in%20Docker/) | **Step 3** — Turnkey runbook for `docker run` NIM on your own GPU. **Requires an NVIDIA GPU** — ready to execute when you have one. |
+| [RAG-hosted/](RAG-hosted/) | **Step 4** — Small end-to-end RAG pipeline (embed → retrieve → rerank → generate) built on hosted NIMs. Same code will run against self-hosted NIMs from Step 3. |
 | `.venv/` | Python 3.13 virtualenv (created locally, not committed). |
 | `.gitignore` | Excludes `.env`, `.venv/`, `__pycache__/`. |
 
@@ -52,7 +53,7 @@ See [Hosted-NIM-API/README.md](Hosted-NIM-API/README.md) for what each lesson te
 1. ✅ **Explore** — playground at [build.nvidia.com](https://build.nvidia.com).
 2. ✅ **Hosted API** — [Hosted-NIM-API/](Hosted-NIM-API/).
 3. ⏸ **Self-hosted NIM** — [Self-hosted NIM in Docker/](Self-hosted%20NIM%20in%20Docker/). Complete runbook; **needs NVIDIA GPU** to actually execute (blocked on CPU-only laptops).
-4. ⬜ **RAG app** — embedding NIM + vector DB + rerank NIM + chat NIM.  Runs against hosted NIMs today; will use the local NIMs from Step 3 once a GPU is available.
+4. ✅ **RAG app** — [RAG-hosted/](RAG-hosted/). Embed NIM + numpy vector store + rerank NIM + chat NIM, with an eval script that measures recall@k and MRR. Runs against hosted NIMs today; flip `base_url` to reuse Step 3's local NIMs once a GPU is available.
 5. ⬜ **Kubernetes** — NIM Operator + Helm chart (needs GPU cluster).
 6. ⬜ **Domain NIMs** — Riva (speech), BioNeMo (science), more VLMs.
 

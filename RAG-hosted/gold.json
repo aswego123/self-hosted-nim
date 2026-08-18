@@ -1,0 +1,22 @@
+[
+  {
+    "query": "How does NIM make LLM deployment fast?",
+    "relevant_ids": ["P01", "P02", "P06", "P08"]
+  },
+  {
+    "query": "Why do RAG systems use a reranker on top of embedding retrieval?",
+    "relevant_ids": ["P13", "P14"]
+  },
+  {
+    "query": "What is a vector database and how does it find similar documents?",
+    "relevant_ids": ["P11", "P12"]
+  },
+  {
+    "query": "How do I monitor a running NIM in production?",
+    "relevant_ids": ["P16", "P17"]
+  },
+  {
+    "query": "How do I scale NIM to many replicas on Kubernetes?",
+    "relevant_ids": ["P05", "P18"]
+  }
+]
